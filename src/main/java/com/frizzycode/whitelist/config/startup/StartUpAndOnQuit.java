@@ -1,11 +1,11 @@
-package com.frizzycode.whitelist.config;
+package com.frizzycode.whitelist.config.startup;
 
 import com.frizzycode.whitelist.model.Customer;
 import com.frizzycode.whitelist.model.Gender;
 import com.frizzycode.whitelist.model.IpAddressObject;
 import com.frizzycode.whitelist.repositories.CustomerRepository;
 import com.frizzycode.whitelist.repositories.IpAddressRepository;
-import com.frizzycode.whitelist.security.CustomIpAuthenticationProvider;
+import com.frizzycode.whitelist.config.security.CustomIpAuthenticationProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,7 +15,7 @@ import java.util.List;
 
 @Configuration
 @RequiredArgsConstructor
-public class StartUp {
+public class StartUpAndOnQuit {
 
     private final IpAddressRepository ipAddressRepository;
     private final CustomerRepository customerRepository;

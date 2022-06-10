@@ -1,4 +1,4 @@
-package com.frizzycode.whitelist.security;
+package com.frizzycode.whitelist.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

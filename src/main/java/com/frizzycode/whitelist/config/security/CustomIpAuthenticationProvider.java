@@ -1,4 +1,4 @@
-package com.frizzycode.whitelist.security;
+package com.frizzycode.whitelist.config.security;
 
 import com.frizzycode.whitelist.exceptions.InvalidIpException;
 import lombok.extern.slf4j.Slf4j;
