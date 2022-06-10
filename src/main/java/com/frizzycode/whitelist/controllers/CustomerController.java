@@ -40,7 +40,7 @@ public class CustomerController {
 
     }
 
-    @PostMapping
+    @PostMapping("addIp/")
     public ResponseEntity<Object> addIpToWhitelist(@RequestParam String ipAddress){
         try {
             customerService.addIpToWhitelist(ipAddress);
@@ -50,7 +50,7 @@ public class CustomerController {
         }
     }
 
-    @DeleteMapping
+    @DeleteMapping("removeIp/")
     public ResponseEntity<Object> deleteIpFromWhiteList(@RequestParam String ipAddress){
         try {
             customerService.deleteIp(ipAddress);

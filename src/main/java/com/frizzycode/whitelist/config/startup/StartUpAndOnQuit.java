@@ -43,6 +43,9 @@ public class StartUpAndOnQuit {
 
     @PreDestroy
     public void saveIps(){
-        provider.getIpList().forEach(address -> ipAddressRepository.save(IpAddressObject.builder().ipAddress(address).build()));
+        provider.getIpList().forEach(address -> {
+            if (!ipAddressRepository.existsByIpAddress(address))
+                ipAddressRepository.save(IpAddressObject.builder().ipAddress(address).build());
+        });
     }
 }
